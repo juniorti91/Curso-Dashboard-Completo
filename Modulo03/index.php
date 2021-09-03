@@ -52,6 +52,22 @@ while ($dados = mysqli_fetch_array($buscar)) {
             data: {
                 labels: [<?php echo $mes; ?>],
                 datasets: [{
+                        label: 'Meta 2018',
+                        data: [120, 300, 99, 155.70, 547.53],
+                        // backgroundColor: 'rgba(255,255,0)',
+                        borderColor: 'rgba(255,255,0)',
+                        borderWidth: 3,
+                        type: 'line'
+                    },
+                    {
+                        label: 'Meta 2019',
+                        data: [255, 160, 120, 69.45, 237.67],
+                        // backgroundColor: 'rgba(255,255,0)',
+                        borderColor: '#ff69b4',
+                        borderWidth: 3,
+                        type: 'line'
+                    },
+                    {
                         label: '2018',
                         data: [<?php echo $ano_2018; ?>],
                         backgroundColor: 'rgba(255,99,132,0.5)',
@@ -65,6 +81,7 @@ while ($dados = mysqli_fetch_array($buscar)) {
                         borderColor: 'rgba(0,255,255)',
                         borderWidth: 3
                     }
+                    
                 ]
             },
             options: {
